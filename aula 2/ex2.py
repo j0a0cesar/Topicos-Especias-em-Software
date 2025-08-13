@@ -9,7 +9,11 @@ class Carro:
         self.ano= int(input("Digite o ano do seu carro: "))
         self.modelo = input("Digite o modelo do seu carro: ")
 
+
+    def exibir(self):
         return f"Carro (modelo: {self.modelo}, ano: {self.ano}, marca: {self.marca})"
     
 c = Carro()
-print(c.ler())
+c.ler()
+print(c.exibir())
+  
