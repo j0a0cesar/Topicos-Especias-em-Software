@@ -1,3 +1,7 @@
+'''
+Classe Básica: Crie uma classe Pessoa com atributos nome e idade. Adicione um construtor para
+inicializar esses valores e um método para exibir as informações da pessoa
+'''
 class Pessoa:
     def __init__(self, nome = "", idade = 0):
         self.nome = nome
