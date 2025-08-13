@@ -1,3 +1,8 @@
+'''
+Herança Simples: Crie uma classe Funcionario com atributos nome e salario. Em seguida, crie uma
+classe Gerente que herda de Funcionario e adicione o atributo departamento. Adicione um método para
+exibir as informações do gerente
+'''
 class Funcionario:          
     def __init__(self, nome = "",salario = 0.0):
         self.nome = nome
