@@ -1,3 +1,8 @@
+'''
+Construtor com Sobrecarga: Crie uma classe Produto com atributos nome e preco. Adicione dois
+‘construtores’: um que recebe ambos os atributos e outro que inicializa apenas o nome (sobrecarga de
+construtores, em python, ‘gambiarra’)
+'''
 class Produto:          
     def __init__(self, nome = "",preco = 0.0):
         self.nome = nome
