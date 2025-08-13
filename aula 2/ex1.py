@@ -4,8 +4,8 @@ class Pessoa:
         self.idade = idade
 
     def ler(self):
-        self.nome = input(f"Digite o seu nome: ")
-        self.idade = int(input(f"Digite a sua idade: "))
+        self.nome = input("Digite o seu nome: ")
+        self.idade = int(input("Digite a sua idade: "))
 
         return f"Pessoa(nome: {self.nome}, idade: {self.idade})"
     
