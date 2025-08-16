@@ -1,0 +1,20 @@
+'''
+1. Divisão Segura
+Crie um programa que peça dois números ao usuário e exiba o resultado da divisão.
+• Trate ZeroDivisionError caso o segundo número seja zero.
+• Trate ValueError caso o usuário digite algo que não seja número.
+• No final, exiba sempre "Operação encerrada"
+'''
+def safe_division():
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        result = num1 / num2
+        print(f"O resultado da divisão é: {result}")
+    except ZeroDivisionError:
+        print("Erro: Divisão por zero não é permitida.")
+    except ValueError:
+        print("Erro: Por favor, digite um número válido.")
+    finally:
+        print("Operação encerrada")
+safe_division()
