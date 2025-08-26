@@ -39,21 +39,33 @@ def permitir_distribuicao(valores_rolados):
     return atributos_finais
 
 def mostrar_raca(personagem):
-
-    print("\n\n")
-    print(f"Raça: {personagem.raca.__class__.__name__}")
-    print(f"Alinhamento: {personagem.raca.alinhamento}")
-    print(f"Infravisao: {personagem.raca.infravisao}")
-    print(f"Movimento: {personagem.raca.movimento}")
+    raca = personagem.raca
+    print("\n--- Detalhes da Raça ---")
+    print(f"Raça: {raca.__class__.__name__}")
+    print(f"Alinhamento Típico: {raca.alinhamento}")
+    print(f"Infravisão: {raca.infravisao}")
+    print(f"Movimento Base: {raca.movimento}m")
+    print(f"Peso Base: {raca.peso_base} kg")
+    print("Habilidades Raciais:")
+    for habilidade in raca.habilidades_raca:
+        print(f"- {habilidade}")
 
 def mostar_classe(personagem):
 
-    print("\n\n")
-    print(f"Classe: {personagem.classe.__class__.__name__}")
-    print(f"Armadura: {personagem.classe.armadura}")
-    print(f"Armas: {personagem.classe.armas}")
-    print(f"Itens magicos: {personagem.classe.intensMagigos}")
-
+    classe = personagem.classe
+    print("\n--- Detalhes da Classe ---")
+    print(f"Classe: {classe.__class__.__name__}")
+    print(f"Pontos de Vida (Nível 1): {classe.vida}")
+    print(f"Base de Ataque (Nível 1): {classe.ataque}")
+    print(f"Jogada de Proteção (Nível 1): {classe.protecao}")
+    print("\nRestrições:")
+    print(f"- Armaduras: {classe.armadura}")
+    print(f"- Armas: {classe.armas}")
+    print(f"- Itens Mágicos: {classe.itens_magicos}")
+    print("\nHabilidades de Classe (Nível 1):")
+    if 1 in classe.habilidades_classe:
+        for habilidade in classe.habilidades_classe[1]:
+            print(f"- {habilidade}")
 
 def main():
     print("--- Gerador de Atributos de Personagem ---")
